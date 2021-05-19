@@ -4,8 +4,8 @@ import requests
 
 
 def send_email(receiver_email, subject, text):
-    sender_email = os.getenv("MY_SENDER_EMAIL")  # Your website's official email address
-    api_key = os.getenv('SENDGRID_API_KEY')
+    sender_email = os.getenv("MY_SENDER_EMAIL","franjotot@gmail.com")  # Your website's official email address
+   api_key = os.getenv("SENDGRID_API_KEY","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")
 
     if sender_email and api_key:
         url = "https://api.sendgrid.com/v3/mail/send"
